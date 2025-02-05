@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:risma_360/panorama.dart';
 
 void main() {
   // Set the status bar color to transparent
@@ -45,6 +46,17 @@ class SplashScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Colors.black, // Adjust the text color as needed
               ),
+            ),
+            SizedBox(height: 20), // Space before button
+            ElevatedButton(
+              onPressed: () {
+                // Navigasi ke halaman panorama
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PanoramaPage()),
+                );
+              },
+              child: Text('Lihat Gambar 360'),
             ),
           ],
         ),
